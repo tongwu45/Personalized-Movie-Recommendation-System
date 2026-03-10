@@ -24,3 +24,22 @@ Each record contains:
 ```text
 user_id | movie_id | rating
 ```
+
+Ratings range from **1 to 5 stars**.
+
+Dataset source:
+
+https://grouplens.org/datasets/movielens/
+
+---
+
+# 🧠 Methods
+
+## 1️⃣ Movie Average Baseline
+
+The simplest recommendation model.
+
+For each movie, compute the **average rating** in the training set:
+```text
+R̂ = μ · 1ᵀ
+```

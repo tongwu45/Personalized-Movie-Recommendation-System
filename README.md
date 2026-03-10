@@ -21,3 +21,4 @@ The models are evaluated using **Mean Squared Error (MSE)** on both training and
 - ⭐ 100,000 ratings  
 
 Each record contains:
+user_id | movie_id | rating

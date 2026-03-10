@@ -95,3 +95,22 @@ Optimization objective:
 ```text
 min Σ (uᵢᵀ vⱼ − Rᵢⱼ)² + λ(||U||² + ||V||²)
 ```
+
+Solved using **Alternating Least Squares (ALS)**.
+
+---
+
+# 📈 Results
+
+Model performance is evaluated using **Mean Squared Error (MSE)**.
+
+Example comparison:
+
+| Model | Description |
+|-----|-----|
+| Movie Average | Baseline predictor |
+| SVD | Low-rank collaborative filtering |
+| Matrix Factorization | Regularized latent factor model |
+
+Example result plot:
+<img width="662" height="492" alt="截屏2026-03-10 上午11 02 44" src="https://github.com/user-attachments/assets/9cb20b74-5df6-4692-a85d-1cdc5ae07dc6" />

@@ -1,2 +1,23 @@
-# Personalized-Movie-Recommendation-System
-I built a personalized movie recommendation system. I used the 100K MovieLens dataset. There are m = 1682 movies and n = 943 users. Each user rated at least 20 movies, but some watched many more. The total dataset contains 100,000 total ratings from all users. The goal is to recommend movies the users haven’t seen.
+# 🎬 Movie Recommendation System (Matrix Factorization)
+
+A machine learning project that builds a **movie recommendation system** using the **MovieLens 100K dataset** from https://grouplens.org/datasets/movielens/100k/.
+
+This project compares several approaches for predicting user movie ratings:
+
+- ⭐ **Movie Average Baseline**
+- 📉 **Low-Rank Matrix Approximation (SVD)**
+- 🧠 **Regularized Matrix Factorization (Alternating Minimization)**
+
+The models are evaluated using **Mean Squared Error (MSE)** on both training and test datasets.
+
+---
+
+# 📊 Dataset
+
+**MovieLens 100K**
+
+- 🎥 1,682 movies  
+- 👤 943 users  
+- ⭐ 100,000 ratings  
+
+Each record contains:

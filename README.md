@@ -43,3 +43,55 @@ For each movie, compute the **average rating** in the training set:
 ```text
 R̂ = μ · 1ᵀ
 ```
+
+Where
+
+- μ = average movie ratings  
+- all users receive the same prediction for a movie  
+
+This forms a **rank-1 estimator**.
+
+---
+
+## 2️⃣ Low-Rank Matrix Approximation (SVD)
+
+Construct a sparse rating matrix:
+```text
+R̃(i,j) =
+observed rating if rated
+0 otherwise
+```
+
+Then compute the **best rank-d approximation** using **truncated Singular Value Decomposition (SVD)**:
+```text
+R̂_d = U S Vᵀ
+```
+
+This learns **low-dimensional embeddings for users and movies**.
+
+Latent dimensions tested:
+```text
+d ∈ {1, 2, 5, 10, 20, 50}
+```
+
+---
+
+## 3️⃣ Matrix Factorization (Alternating Minimization)
+
+Instead of filling missing ratings with zero, we optimize **only over observed ratings**.
+
+We learn latent vectors:
+```text
+movie vector: uᵢ
+user vector: vⱼ
+```
+
+Predicted rating:
+```text
+R̂ᵢⱼ = uᵢᵀ vⱼ
+```
+
+Optimization objective:
+```text
+min Σ (uᵢᵀ vⱼ − Rᵢⱼ)² + λ(||U||² + ||V||²)
+```
